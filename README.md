@@ -13,9 +13,13 @@ A aplicação atual foi desenvolvida e testada com as seguintes tecnologias:
 * PostgreSQL + pgVector 17
 * Docker & Docker Compose
 
-Os provedores de IA disponíveis são:
-* Google
+Os provedores e modelos de IA utilizados são:
+* Google:
+  * Embedding: `models/gemini-embedding-2`
+  * Response: `gemini-2.5-flash-lite`
 * OpenAI
+  * Embedding: `text-embedding-3-small`
+  * Response: `gpt-5-nano`
 
 # Estrutura de Dados
 
