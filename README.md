@@ -82,6 +82,8 @@ Apenas pressione ENTER para usar o provedor da OpenAI (padrão).
 python src/ingest.py
 ```
 
+Caso já tenha sido ingerido dados para um provedor de IA anteriormente, será solicitado autorização para excluir os dados existentes.
+
 Para alterar informar outro arquivo, basta incluir o path + nome na variável de ambiente `PDF_PATH`.
 
 Obs.: Deve ser realizado a ingestão dos dados para cada provedor (Google e OpenAI).
