@@ -49,7 +49,15 @@ Todos os dados consumidos são armazenados no banco de dados PostgreSQL com PGVe
 
 Para executar a aplicação, siga os passos abaixo:
 
-## 1. Configuração de Variáveis de Ambiente
+## 1. Execução do Banco de Dados
+
+Para executar o banco de dados usando Docker local necessário para a execução do script, execute o comando abaixo:
+
+```shell
+docker-compose up -d
+```
+
+## 2. Configuração de Variáveis de Ambiente
 
 Copie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente necessárias:
 * `GOOGLE_API_KEY`
@@ -57,7 +65,7 @@ Copie o arquivo `.env.example` para `.env` e preencha as variáveis de ambiente 
 
 Obs.: Caso seja utilizado apenas o provedor da OpenAI ou Google, preencha apenas a variável de ambiente correspondente.
 
-## 2. Criação de Ambiente Virtual Python
+## 3. Criação de Ambiente Virtual Python
 
 Para executar a aplicação, primeiro execute os comandos abaixo para preparar o ambiente virtual:
 
@@ -68,7 +76,7 @@ source venv/bin/activate
 
 Obs.: Para sair do ambiente virtual, execute o comando `deactivate`.
 
-## 3. Instalação das Dependências
+## 4. Instalação das Dependências
 
 Dentro do ambiente virtual, instale as dependências necessárias para execução da aplicação:
 
@@ -76,7 +84,7 @@ Dentro do ambiente virtual, instale as dependências necessárias para execuçã
 python -m pip install -r requirements.txt
 ```
 
-## 4. Ingestão dos Dados
+## 5. Ingestão dos Dados
 
 Para realizar a ingestão dos dados do arquivo `document.pdf`, execute o comando abaixo, onde será questionado qual provedor utilizar (openai ou google):
 
@@ -92,7 +100,7 @@ Para alterar informar outro arquivo, basta incluir o path + nome na variável de
 
 Obs.: Deve ser realizado a ingestão dos dados para cada provedor (Google e OpenAI).
 
-## 5. Execução do Chat
+## 6. Execução do Chat
 
 Execute o comando abaixo para iniciar o chat e inserir o prompt desejado, onde será questionado qual provedor utilizar:
 
